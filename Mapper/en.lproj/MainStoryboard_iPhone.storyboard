@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjO-fL-kY1">
+                                <items>
+                                    <barButtonItem title="Refresh" id="fv1-Tr-mdZ">
+                                        <connections>
+                                            <action selector="btRefreshClick:" destination="2" id="fM2-Ai-Ta1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FQj-de-FPK"/>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FQj-de-FPK" firstAttribute="bottom" secondItem="HjO-fL-kY1" secondAttribute="top" type="default" id="A0r-iq-CS2"/>
+                            <constraint firstItem="FQj-de-FPK" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="KcR-6o-6g3"/>
+                            <constraint firstItem="FQj-de-FPK" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="RAG-hP-uxE"/>
+                            <constraint firstItem="HjO-fL-kY1" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Uzc-uw-eL4"/>
+                            <constraint firstItem="HjO-fL-kY1" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Zdw-6I-z9N"/>
+                            <constraint firstItem="FQj-de-FPK" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="fBf-qk-7oc"/>
+                            <constraint firstItem="HjO-fL-kY1" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="xco-ey-9kR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btRefresh" destination="fv1-Tr-mdZ" id="0fg-If-ZSG"/>
+                        <outlet property="mapView" destination="FQj-de-FPK" id="uH5-Ou-YRg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
