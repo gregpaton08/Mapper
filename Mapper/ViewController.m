@@ -29,6 +29,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    // initialize location manager
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
@@ -37,12 +38,16 @@
 }
 
 - (IBAction)btRefreshClick:(id)sender {
-    
+    // zoom around current location with half mile radius
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(loc.coordinate,
+                                                                       0.5 * METERS_PER_MILE,
+                                                                       0.5 * METERS_PER_MILE);    
+    [_mapView setRegion:viewRegion animated:YES];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    CLLocation *loc = [locations lastObject];
-    NSLog(@"Location %f %f\n", loc.coordinate.latitude, loc.coordinate.longitude);
-    NSLog(@"loc\n");
+    // update current location
+    loc = [locations lastObject];
+    NSLog(@"Loc: %f %f\n", loc.coordinate.latitude, loc.coordinate.longitude);
 }
 @end

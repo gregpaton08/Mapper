@@ -12,7 +12,8 @@
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate> {
 
-    CLLocationManager *locationManager;
+    CLLocationManager   *locationManager;
+    CLLocation          *loc;
     
 }
 
