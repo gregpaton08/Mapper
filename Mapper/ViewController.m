@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#include "MPGAnnotation.h"
 
 #define METERS_PER_MILE 1609.344
 
@@ -15,6 +16,9 @@
 @end
 
 @implementation ViewController
+
+@synthesize mapView = _mapView;
+@synthesize btRefresh = _btRefresh;
 
 - (void)viewDidLoad
 {
@@ -43,6 +47,9 @@
                                                                        0.5 * METERS_PER_MILE,
                                                                        0.5 * METERS_PER_MILE);    
     [_mapView setRegion:viewRegion animated:YES];
+    
+    MPGAnnotation *annotation = [[MPGAnnotation alloc] initWithCoordinate:loc.coordinate];
+    [_mapView addAnnotation:annotation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
@@ -50,4 +57,5 @@
     loc = [locations lastObject];
     NSLog(@"Loc: %f %f\n", loc.coordinate.latitude, loc.coordinate.longitude);
 }
+
 @end

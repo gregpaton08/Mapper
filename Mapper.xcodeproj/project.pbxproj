@@ -21,6 +21,7 @@
 		3734971016D44BC9003F6F41 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3734970F16D44BC9003F6F41 /* ViewController.m */; };
 		3734971716D44C9D003F6F41 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3734971616D44C9D003F6F41 /* MapKit.framework */; };
 		3734971916D47023003F6F41 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3734971816D47023003F6F41 /* CoreLocation.framework */; };
+		3734971C16D47CBF003F6F41 /* MPGAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3734971B16D47CBF003F6F41 /* MPGAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		3734970F16D44BC9003F6F41 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3734971616D44C9D003F6F41 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3734971816D47023003F6F41 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3734971A16D47CBF003F6F41 /* MPGAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGAnnotation.h; sourceTree = "<group>"; };
+		3734971B16D47CBF003F6F41 /* MPGAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPGAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				3734970B16D44BC9003F6F41 /* MainStoryboard_iPad.storyboard */,
 				3734970E16D44BC9003F6F41 /* ViewController.h */,
 				3734970F16D44BC9003F6F41 /* ViewController.m */,
+				3734971A16D47CBF003F6F41 /* MPGAnnotation.h */,
+				3734971B16D47CBF003F6F41 /* MPGAnnotation.m */,
 				373496F716D44BC9003F6F41 /* Supporting Files */,
 			);
 			path = Mapper;
@@ -188,6 +193,7 @@
 				373496FD16D44BC9003F6F41 /* main.m in Sources */,
 				3734970116D44BC9003F6F41 /* AppDelegate.m in Sources */,
 				3734971016D44BC9003F6F41 /* ViewController.m in Sources */,
+				3734971C16D47CBF003F6F41 /* MPGAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
